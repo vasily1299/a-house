@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бухгалтерский Дом Ирины Нечаевой</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#b1746f50',
+                            100: '#b1746f41',
+                            200: '#c1b7ab',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#af726d',
+                            600: '#b1746f',
+                            700: '#af726d',
+                            800: '#936b61',
+                            900: '#734b41',
+                        },
+                        accent: {
+                            50: '#ecfdf5',
+                            100: '#b1746f61',
+                            200: '#a7f3d0',
+                            300: '#6ee7b7',
+                            400: '#936b6177',
+                            500: '#a1645f',
+                            600: '#b1746f',
+                            700: '#047857',
+                            800: '#368f76',
+                            900: '#81443f',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .shadow-soft { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02); }
+        .card-hover:hover { transform: translateY(-5px); transition: transform 0.3s ease; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Навигация -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm shadow-soft">
+        <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="flex flex-col leading-tight">
+                    <span class="text-lg sm:text-xl font-bold text-primary-800">Бухгалтерский Дом</span>
+                    <span class="text-xs sm:text-sm text-gray-600">Ирины Нечаевой</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                <a href="#how" class="text-gray-600 hover:text-primary-700 font-medium text-sm lg:text-base">Как работаем</a>
+                <a href="#pricing" class="text-gray-600 hover:text-primary-700 font-medium text-sm lg:text-base">Тарифы</a>
+                <a href="#reviews" class="text-gray-600 hover:text-primary-700 font-medium text-sm lg:text-base">Отзывы</a>
+                <a href="#faq" class="text-gray-600 hover:text-primary-700 font-medium text-sm lg:text-base">FAQ</a>
+            </div>
+            <a href="#apply" class="bg-primary-600 text-white px-4 py-2 sm:px-6 sm:py-2 rounded-lg font-semibold text-sm sm:text-base hover:bg-primary-700 transition-colors shadow-lg shadow-primary-600/30">Оформить</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+        <div class="flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                    Ваш надёжный <span class="text-primary-600">бухгалтер</span> на аутсорсе
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-600 mt-4 mb-6 max-w-2xl mx-auto lg:mx-0">
+                    Регистрация бизнеса, отчётность, кадровый учёт — всё включено. Честные цены и полная прозрачность.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4">
+                    <a href="#apply" class="bg-primary-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg text-base sm:text-lg font-semibold text-center hover:bg-primary-700 transition-colors shadow-xl shadow-primary-600/30">
+                        Оформить заявку
+                    </a>
+                    <a href="#pricing" class="border-2 border-primary-200 text-primary-700 px-6 py-3 sm:px-8 sm:py-4 rounded-lg text-base sm:text-lg font-semibold text-center hover:bg-primary-50 transition-colors">
+                        Посмотреть тарифы
+                    </a>
+                </div>
+            </div>
+            <div class="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
+                <div class="main-img relative w-full max-w-md">
+                    <!-- IMG бухгалтер за работой -->
+                    <img src="/main-img.png" class="w-full h-auto"></img>
+                    <style>
+                        /* .main-img{
+                            display: inline-block; 
+                            overflow: hidden;
+                        } */
+                        .main-img img{
+                            cursor: pointer;
+                            transition: all 1s ease-out;
+                            -moz-transition: all 1s ease-out;
+                            -o-transition: all 1s ease-out;
+                            -webkit-transition: all 1s ease-out;
+                            transform: scale(1.3);
+                            -webkit-transform: scale(1.3);
+                            -moz-transform: scale(1.3);
+                            -o-transform: scale(1.3);
+                        }
+                        .main-img img:hover{
+                            transform: scale(1.4);
+                            -webkit-transform: scale(1.4);
+                            -moz-transform: scale(1.4);
+                            -o-transform: scale(1.4);
+                        }
+                    </style>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Как работаем -->
+    <section id="how" class="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-3">Как мы работаем</h2>
+        <p class="text-lg sm:text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">Три простых шага к спокойствию за ваш бизнес</p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-soft card-hover text-center sm:text-left">
+                <div class="w-14 h-14 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 text-2xl font-bold mb-4 mx-auto sm:mx-0">1</div>
+                <h3 class="text-xl sm:text-2xl font-bold text-primary-800 mb-3">Консультация</h3>
+                <p class="text-gray-600">Бесплатно знакомимся, анализируем вашу ситуацию, подбираем оптимальный тариф.</p>
+            </div>
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-soft card-hover text-center sm:text-left">
+                <div class="w-14 h-14 rounded-xl bg-accent-100 flex items-center justify-center text-accent-600 text-2xl font-bold mb-4 mx-auto sm:mx-0">2</div>
+                <h3 class="text-xl sm:text-2xl font-bold text-primary-800 mb-3">Заключение договора</h3>
+                <p class="text-gray-600">Подписываем прозрачный договор, передаёте доступы — мы приступаем к работе.</p>
+            </div>
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-soft card-hover text-center sm:text-left">
+                <div class="w-14 h-14 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 text-2xl font-bold mb-4 mx-auto sm:mx-0">3</div>
+                <h3 class="text-xl sm:text-2xl font-bold text-primary-800 mb-3">Ведение и отчётность</h3>
+                <p class="text-gray-600">Ежемесячная отчётность, налоги, кадры — вы занимаетесь бизнесом, а мы цифрами.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Тарифы -->
+    <section id="pricing" class="container mx-auto px-4 sm:px-6 py-12 sm:py-16 bg-primary-50">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-3">Тарифы обслуживания</h2>
+        <p class="text-lg sm:text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">Выберите подходящий формат сотрудничества</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <!-- Start -->
+            <div class="bg-white rounded-2xl shadow-soft overflow-hidden card-hover">
+                <div class="p-6 sm:p-8">
+                    <div class="inline-block px-3 py-1 sm:px-4 sm:py-2 bg-primary-100 text-primary-700 rounded-lg font-semibold mb-4 text-sm sm:text-base">Старт</div>
+                    <div class="mb-4">
+                        <span class="text-4xl sm:text-5xl font-bold text-primary-900">9 900 ₽</span>
+                        <span class="text-gray-500 text-sm sm:text-base">/мес</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-sm sm:text-base">Для ИП и малого бизнеса</p>
+                    <ul class="space-y-3 mb-8 text-sm sm:text-base">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Регистрация ИП/ООО</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Подготовка деклараций</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Сдача отчётности</li>
+                        <li class="flex items-center text-gray-400"><span class="text-gray-300 mr-2">✗</span> Кадровый учёт</li>
+                        <li class="flex items-center text-gray-400"><span class="text-gray-300 mr-2">✗</span> Бухгалтерское сопровождение</li>
+                    </ul>
+                    <a href="#apply" class="block w-full bg-primary-100 text-primary-700 text-center py-3 rounded-lg font-semibold hover:bg-primary-200 transition-colors text-sm sm:text-base">Выбрать</a>
+                </div>
+            </div>
+            
+            <!-- Plus (популярный) -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden card-hover transform scale-105 relative z-10">
+                <div class="absolute top-0 right-0 bg-primary-600 text-white px-4 py-1 sm:px-6 sm:py-2 rounded-bl-lg font-semibold text-xs sm:text-sm">Популярный</div>
+                <div class="p-6 sm:p-8">
+                    <div class="inline-block px-3 py-1 sm:px-4 sm:py-2 bg-gradient-to-r from-primary-600 to-accent-500 text-white rounded-lg font-semibold mb-4 text-sm sm:text-base">Оптимальный</div>
+                    <div class="mb-4">
+                        <span class="text-4xl sm:text-5xl font-bold text-primary-900">24 900 ₽</span>
+                        <span class="text-gray-500 text-sm sm:text-base">/мес</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-sm sm:text-base">Для ООО и активной торговли</p>
+                    <ul class="space-y-3 mb-8 text-sm sm:text-base">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Всё из тарифа Старт</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Полное бухгалтерское сопровождение</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Кадровый учёт (до 5 чел.)</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Расчёт зарплаты</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Консультации 24/7</li>
+                    </ul>
+                    <a href="#apply" class="block w-full bg-gradient-to-r from-primary-600 to-accent-500 text-white text-center py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity text-sm sm:text-base">Выбрать</a>
+                </div>
+            </div>
+            
+            <!-- Pro -->
+            <div class="bg-white rounded-2xl shadow-soft overflow-hidden card-hover">
+                <div class="p-6 sm:p-8">
+                    <div class="inline-block px-3 py-1 sm:px-4 sm:py-2 bg-primary-100 text-primary-700 rounded-lg font-semibold mb-4 text-sm sm:text-base">Премиум</div>
+                    <div class="mb-4">
+                        <span class="text-4xl sm:text-5xl font-bold text-primary-900">39 900 ₽</span>
+                        <span class="text-gray-500 text-sm sm:text-base">/мес</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-sm sm:text-base">Для крупных компаний</p>
+                    <ul class="space-y-3 mb-8 text-sm sm:text-base">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Всё из тарифа Оптимальный</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Кадровый учёт (без ограничений)</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Налоговое планирование</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Юридическое сопровождение</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Личный менеджер</li>
+                    </ul>
+                    <a href="#apply" class="block w-full bg-primary-100 text-primary-700 text-center py-3 rounded-lg font-semibold hover:bg-primary-200 transition-colors text-sm sm:text-base">Выбрать</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма заявки -->
+    <section id="apply" class="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-soft p-6 sm:p-8 md:p-10">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">Оставить заявку</h2>
+            <p class="text-gray-600 mb-8 text-sm sm:text-base">Заполните форму, и мы свяжемся с вами в ближайшее время</p>
+            
+            <form id="application-form" class="space-y-5">
+                <div>
+                    <label for="name" class="block text-gray-700 font-medium mb-1 text-sm sm:text-base">Имя *</label>
+                    <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition text-sm sm:text-base" placeholder="Иван Иванов">
+                </div>
+                
+                <div>
+                    <label for="phone" class="block text-gray-700 font-medium mb-1 text-sm sm:text-base">Телефон *</label>
+                    <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition text-sm sm:text-base" placeholder="+7 (999) 123-45-67">
+                </div>
+                
+                <div>
+                    <label for="tariff" class="block text-gray-700 font-medium mb-1 text-sm sm:text-base">Тариф *</label>
+                    <select id="tariff" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition text-sm sm:text-base">
+                        <option value="" disabled selected>Выберите тариф</option>
+                        <option value="Start">Старт — 9 900 ₽/мес</option>
+                        <option value="Plus">Оптимальный — 24 900 ₽/мес</option>
+                        <option value="Pro">Премиум — 39 900 ₽/мес</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="comment" class="block text-gray-700 font-medium mb-1 text-sm sm:text-base">Комментарий (необязательно)</label>
+                    <textarea id="comment" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition text-sm sm:text-base" placeholder="Ваши пожелания, вопросы"></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-gradient-to-r from-primary-600 to-accent-500 text-white py-4 rounded-lg font-semibold text-base sm:text-lg hover:opacity-90 transition-opacity shadow-xl shadow-primary-600/30">
+                    Отправить заявку
+                </button>
+                
+                <p class="text-xs sm:text-sm text-gray-500 text-center pt-3">
+                    Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section id="reviews" class="container mx-auto px-4 sm:px-6 py-12 sm:py-16 bg-primary-50">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-3">Отзывы клиентов</h2>
+        <p class="text-lg sm:text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">Нам доверяют свой финансовый учёт</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-soft">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-primary-500 to-accent-400 flex items-center justify-center text-white font-bold text-base sm:text-lg mr-3 sm:mr-4">АК</div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-sm sm:text-base">Анна Карпова</h4>
+                        <p class="text-gray-500 text-xs sm:text-sm">ИП, розничный магазин</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 italic text-sm sm:text-base">"Передала бухгалтерию полгода назад — ни одной ошибки в отчётности, всегда на связи. Очень довольна!"</p>
+            </div>
+            
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-soft">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-primary-500 to-accent-400 flex items-center justify-center text-white font-bold text-base sm:text-lg mr-3 sm:mr-4">МС</div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-sm sm:text-base">Михаил Соболев</h4>
+                        <p class="text-gray-500 text-xs sm:text-sm">ООО "СтройГрупп"</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 italic text-sm sm:text-base">"Раньше был штатный бухгалтер, но с Ириной выгоднее и спокойнее. Рекомендую тариф Оптимальный."</p>
+            </div>
+            
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-soft">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-primary-500 to-accent-400 flex items-center justify-center text-white font-bold text-base sm:text-lg mr-3 sm:mr-4">ЕВ</div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-sm sm:text-base">Елена Васильева</h4>
+                        <p class="text-gray-500 text-xs sm:text-sm">Торговая компания</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 italic text-sm sm:text-base">"Помогли с регистрацией ООО, теперь ведут полностью кадры и отчётность. Всё чётко и вовремя."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-3">Часто задаваемые вопросы</h2>
+        <p class="text-lg sm:text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">Ответы на самые популярные вопросы</p>
+        
+        <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-soft overflow-hidden divide-y divide-gray-200">
+            <div class="p-6 sm:p-8">
+                <h3 class="text-lg sm:text-xl font-bold text-primary-800 mb-2">Какие документы нужны для начала работы?</h3>
+                <p class="text-gray-700 text-sm sm:text-base">Достаточно паспорта и ИНН, а также доступа к отчётности (если уже есть). Для регистрации — копии учредительных документов.</p>
+            </div>
+            <div class="p-6 sm:p-8">
+                <h3 class="text-lg sm:text-xl font-bold text-primary-800 mb-2">Как часто вы отчитываетесь?</h3>
+                <p class="text-gray-700 text-sm sm:text-base">Ежемесячно предоставляем отчёт о движении средств, а по итогам квартала — полный пакет для налоговой.</p>
+            </div>
+            <div class="p-6 sm:p-8">
+                <h3 class="text-lg sm:text-xl font-bold text-primary-800 mb-2">Можно ли сменить тариф в процессе?</h3>
+                <p class="text-gray-700 text-sm sm:text-base">Да, вы можете перейти на более высокий тариф в любой момент с доплатой разницы пропорционально остатку месяца.</p>
+            </div>
+            <div class="p-6 sm:p-8">
+                <h3 class="text-lg sm:text-xl font-bold text-primary-800 mb-2">Что входит в кадровый учёт?</h3>
+                <p class="text-gray-700 text-sm sm:text-base">Оформление приёмов/увольнений, расчёт зарплаты, отпусков, больничных, подготовка отчётности в СФР и ФНС.</p>
+            </div>
+            <div class="p-6 sm:p-8">
+                <h3 class="text-lg sm:text-xl font-bold text-primary-800 mb-2">Есть ли у вас офис для встреч?</h3>
+                <p class="text-gray-700 text-sm sm:text-base">Да, мы находимся по адресу: г. Магнитогорск, ул. Карла Маркса, д. 10, офис 7. Работаем по предварительной записи.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-gradient-to-r from-primary-900 to-primary-800 text-white py-10">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <div class="mb-6 lg:mb-0 text-center lg:text-left">
+                    <div class="flex items-center justify-center lg:justify-start space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">БД</span>
+                        </div>
+                        <div class="text-left">
+                            <span class="text-xl sm:text-2xl font-bold">Бухгалтерский Дом</span>
+                            <p class="text-primary-200 text-xs sm:text-sm">Ирины Нечаевой</p>
+                        </div>
+                    </div>
+                    <p class="text-primary-200 text-xs sm:text-sm">© 2026 Все права защищены.</p>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-6 lg:space-x-10 text-sm sm:text-base">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-primary-200">📞</span>
+                        <a href="tel:+79227255518" class="text-white hover:text-accent-200 transition-colors">8 922 725 55 18</a>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-primary-200">✉️</span>
+                        <a href="mailto:info@buhdom.ru" class="text-white hover:text-accent-200 transition-colors">info@buhdom.ru</a>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-primary-200">📍</span>
+                        <span class="text-white">Магнитогорск, ул. Карла Маркса, 10</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-6 border-t border-primary-700 flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm text-primary-200">
+                <div class="flex space-x-6 mb-4 sm:mb-0">
+                    <a href="#" class="hover:text-white">Политика конфиденциальности</a>
+                    <a href="#" class="hover:text-white">Договор оферты</a>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-white">Telegram</a>
+                    <a href="#" class="hover:text-white">WhatsApp</a>
+                    <a href="#" class="hover:text-white">VK</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('application-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const tariff = document.getElementById('tariff').value;
+            
+            if (name && phone && tariff) {
+                alert('Заявка отправлена! Мы свяжемся с вами в течение дня.');
+                document.getElementById('application-form').reset();
+            } else {
+                alert('Пожалуйста, заполните имя и телефон и выберите тариф.');
+            }
+        });
+    </script>
+</body>
+</html>
